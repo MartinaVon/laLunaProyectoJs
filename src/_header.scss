@@ -1,0 +1,59 @@
+header {
+    display: flex;
+    height: 90px;
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    background-color: transparent;
+    z-index: 5;
+
+    nav {
+        width: 50%;
+        ul {
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+            font-size: 19px;
+        }
+    }}
+  .header__checkout-box {
+       width: 50%}
+//         display: flex;
+//         cursor: pointer;
+//         .checkout-box-title {
+//             border: solid 3px #fd9550;
+//             width: 65%;
+//             display: flex;
+//             text-align: center;
+//             border-radius: 10px;
+//             padding: 7px;
+//             h6 {
+//                 color: white;
+//                 font-size: 25px;        
+//             }
+//             .checkout-box-span {
+//                 width: 20%;
+//                 border-radius: 10px;
+//                 padding: 3px;
+//                 text-align: center;
+//                 span {
+//                     color: white;
+//                     font-size: 30px;
+//                 }
+//             }
+//         }
+//         .collapse-checkout-box {
+//             width: 70%;
+//             height: 200px;
+//             background-color: #fd9550;
+//             display: none;
+//         }
+//     &:hover {
+//         height: 250px;
+//         transition: 0.4s;
+//     }
+//     &:hover ~.collapse-checkout-box {
+//         display: block;
+//     }
+//     }
+// }

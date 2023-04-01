@@ -1,0 +1,138 @@
+.moon-exploration {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    position: relative;
+
+    .moon-exploration___title {
+        margin-top: 80px;
+        padding: 15px;
+        h5 {
+            text-align: center;
+            font-size: min(7vw, 30px);
+        }
+    }
+    .moon-exploration___img {
+    height: auto;
+    opacity: 0;
+    width: 50%;
+    position: relative;
+    display: block;
+    @media (min-width: 925px) {
+        width: 30%;
+    }
+    img {
+        width:80vw;
+        max-width: 600px;
+    }
+    span {
+        font-size: min(6vw, 30px);
+        position: absolute;
+        color: #fd9550;
+        cursor: pointer;
+        display: none;
+        
+    }
+    .cold-span1 {
+        top: 56%;
+        left: 35%;
+    }
+    .cold-span2 {
+        top: 20%;
+        left: 80%;
+    }
+    .cold-span3 {
+        top: 80%;
+        left: 70%;
+    }
+    .hot-span1 {
+        top: 25%;
+        left: 95%;
+    }
+    .hot-span2 {
+        top: 80%;
+        left: 55%;
+    }
+    .hot-span3 {
+        top: 45%;
+        left: 70%;
+    }
+    }
+.moon-exploration__filter{
+    opacity: 0;
+    width: 100%;
+    align-self: flex-end;
+    position: relative;
+    @media (min-width: 1000px) {
+        width: 50%;
+    }
+    h6 {
+        font-size: min(5vw, 25px);
+        padding: 5px;
+        text-align: center;
+        border:#fd9550 3px solid;
+        border-right: none;
+        border-radius: 10px;
+    }
+    .weather-options {
+        display: flex;
+        margin-top: 25px;
+        justify-content: space-around;
+        h4 {
+            font-size: min(5vw, 25px);
+            cursor: pointer;
+            background-color: #fd9550;
+            padding: 5px;
+            width: 30%;
+            text-align: center;
+            border-radius: 10px;
+        }
+    }
+}    
+.cold-weather-card1 {
+    width: 90%;
+    max-width: 500px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 200px;
+    height: 70%;
+    background: rgb(36,36,79);
+    background: radial-gradient(circle, rgba(36,36,79,1) 18%, rgba(32,18,48,1) 59%, rgba(23,22,29,1) 100%);
+    border-radius: 20px;
+    border: solid 1px white;
+    display: none;
+    @media (min-width: 1000px) {
+      left: 500px;
+      right: 20px;
+      margin-top: 300px;
+      height: 60%;
+    }
+
+    .span-for-closing-card {
+        margin: 10px;
+    }
+
+    h3 {
+        margin-top: 10px;
+        font-size: min(6vw, 27px);
+        text-align: center;
+    }
+    p {
+        font-size: min(5vw, 25px);
+        margin: 20px 0;
+        text-align: center;
+        top: 50px
+    }
+    .image {
+    width: 80vw;
+    max-width: 470px;
+    display: block;
+    margin: auto;
+    }
+}
+
+}
+

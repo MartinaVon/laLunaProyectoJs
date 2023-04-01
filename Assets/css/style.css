@@ -1,0 +1,384 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Mars;
+  font-weight: 100;
+}
+* a {
+  text-decoration: none;
+  color: white;
+}
+
+@font-face {
+  font-family: "Anurati";
+  src: url(/Assets/fonts/Anurati-Regular.otf);
+}
+@font-face {
+  font-family: Mars;
+  src: url(/Assets/fonts/Mars-Project.ttf);
+}
+@font-face {
+  font-family: Adam;
+  src: url(/Assets/fonts/Adam-Medium.ttf);
+}
+.container-for-background {
+  background: rgb(36, 36, 79);
+  background: radial-gradient(circle, rgb(36, 36, 79) 18%, rgb(32, 18, 48) 59%, rgb(23, 22, 29) 100%);
+  width: 100%;
+  height: auto;
+  display: flex;
+  overflow-x: hidden;
+  flex-direction: column;
+  color: white;
+}
+.container-for-background .main-banner .moon-title {
+  width: 100%;
+  text-align: center;
+  margin-top: 15%;
+  padding: 15px;
+}
+.container-for-background .main-banner .moon-title h1 {
+  font-size: 60px;
+  font-family: "Anurati";
+}
+.container-for-background .main-banner .moon-image {
+  position: absolute;
+  z-index: 0;
+  width: 500px;
+  height: 500px;
+  top: 17%;
+  right: 30%;
+}
+.container-for-background .main-banner .main__text-description {
+  padding: 15px;
+  margin-left: 50px;
+}
+.container-for-background .main-banner .main__text-description h6 {
+  font-size: 30px;
+}
+.container-for-background .main-banner .text-for-welcome {
+  font-size: 30px;
+  position: absolute;
+  top: 100px;
+  left: 50px;
+}
+.container-for-background .moon-exploration {
+  width: 100%;
+  height: 100;
+}
+.container-for-background .moon-exploration .moon-exploration___title {
+  font-size: 30px;
+  margin-top: 150px;
+  padding: 15px;
+}
+.container-for-background .moon-exploration .moon-exploration___title h5 {
+  margin-left: 100px;
+  font-size: 60px;
+}
+.container-for-background .moon-exploration .moon-exploration___img {
+  height: 100vh;
+  width: 100%;
+}
+.container-for-background .moon-exploration .moon-exploration___img img {
+  width: 600px;
+  height: 600px;
+}
+.container-for-background .org-info {
+  height: 100vh;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-for-background .org-info .org-info__textContainer {
+  width: 70%;
+  margin-top: 100px;
+}
+.container-for-background .org-info .org-info__textContainer h4 {
+  font-size: 30px;
+}
+.container-for-background .org-info .org-info__ticketsContainer {
+  width: 100%;
+  display: flex;
+  height: 70vh;
+  justify-content: space-around;
+  align-items: center;
+}
+.container-for-background .org-info .org-info__ticketsContainer .org-info__tickets {
+  height: 80%;
+  width: 25%;
+  border: 1px solid rgba(255, 255, 255, 0.537254902);
+  border-radius: 8%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 30px;
+}
+.container-for-background .org-info .org-info__ticketsContainer .org-info__tickets h6 {
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+.container-for-background .org-info .org-info__ticketsContainer .org-info__tickets .price {
+  font-size: 35px;
+  align-self: center;
+  color: #fd9550;
+}
+.container-for-background .org-info .org-info__ticketsContainer .org-info__tickets ul {
+  list-style: none;
+  margin-top: 40px;
+}
+.container-for-background .org-info .org-info__ticketsContainer .org-info__tickets .watch-more {
+  font-size: 20px;
+  margin-top: 20px;
+  align-self: flex-end;
+}
+.container-for-background .org-info .org-info__ticketsContainer .ticket1 {
+  background: rgb(221, 88, 0);
+  background: linear-gradient(338deg, rgb(221, 88, 0) 0%, rgb(128, 57, 44) 0%, rgb(165, 69, 26) 0%, rgb(83, 42, 65) 22%, rgb(53, 31, 79) 55%, rgba(23, 22, 29, 0.9724264706) 96%);
+}
+.container-for-background .org-info .org-info__ticketsContainer .ticket2 {
+  background: rgb(221, 88, 0);
+  background: linear-gradient(338deg, rgb(221, 88, 0) 0%, rgb(128, 57, 44) 0%, rgb(165, 69, 26) 0%, rgb(83, 42, 65) 22%, rgb(53, 31, 79) 55%, rgba(23, 22, 29, 0.9724264706) 96%);
+}
+.container-for-background .org-info .org-info__ticketsContainer .ticket3 {
+  background: rgb(221, 88, 0);
+  background: linear-gradient(338deg, rgb(221, 88, 0) 0%, rgb(128, 57, 44) 0%, rgb(165, 69, 26) 0%, rgb(83, 42, 65) 22%, rgb(53, 31, 79) 55%, rgba(23, 22, 29, 0.9724264706) 96%);
+}
+.container-for-background .image-gallery {
+  margin-top: 100px;
+  height: 100vh;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.container-for-background .image-gallery h6 {
+  width: 100%;
+  font-size: 30px;
+  text-align: right;
+  padding-right: 100px;
+}
+.container-for-background .image-gallery .image-container {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.container-for-background .image-gallery .image-container .each-image-container {
+  width: 500px;
+  height: 500px;
+  margin: 10px;
+  object-fit: contain;
+}
+.container-for-background .go-to-simulator {
+  width: 100%;
+  margin: 50px 0;
+  text-align: center;
+}
+.container-for-background .go-to-simulator h3 {
+  border: solid 1px;
+  font-size: 30px;
+  margin: auto;
+  padding: 10px;
+  border-radius: 8%;
+  width: 30%;
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  height: 90px;
+  width: 100%;
+  padding: 20px;
+  position: absolute;
+  background-color: transparent;
+}
+header nav {
+  width: 50%;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  font-size: 19px;
+}
+header .logo-container {
+  width: 50%;
+}
+
+.the-moon-word-space {
+  width: 130%;
+  height: auto;
+  align-self: center;
+}
+.the-moon-word-space h4 {
+  display: inline;
+  font-size: 75px;
+}
+.the-moon-word-space h4 span {
+  font-size: 40px;
+}
+.the-moon-word-space .yellow-moon {
+  color: #fd9550;
+}
+
+.popUp-overlay {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.475);
+  z-index: 2;
+}
+.popUp-overlay .init-popUp {
+  width: 50%;
+  position: absolute;
+  height: 35%;
+  background-color: #17161d;
+  border: solid 1px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.popUp-overlay .init-popUp h5 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.popUp-overlay .init-popUp input {
+  padding: 10px;
+  width: 60%;
+  border: none;
+  margin: 5px;
+}
+.popUp-overlay .init-popUp input:focus {
+  outline: none;
+}
+.popUp-overlay .init-popUp .text-input:focus {
+  border: solid 1px rgb(24, 1, 54);
+}
+.popUp-overlay .init-popUp .submit-input {
+  cursor: pointer;
+}
+.popUp-overlay .init-popUp .submit-input:hover {
+  background-color: #17161d;
+  color: white;
+}
+.popUp-overlay .init-popUp span {
+  align-self: flex-end;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.popUp-overlay .init-popUp h6 {
+  font-size: 15px;
+  margin: 15px 0;
+}
+
+.overlay-display-none {
+  display: none;
+}
+
+.simulator-overlay {
+  height: 100vh;
+  width: 100%;
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.475);
+  z-index: 2;
+}
+.simulator-overlay .simulator {
+  width: 70%;
+  padding: 30px;
+  position: absolute;
+  height: 90%;
+  background: rgb(36, 36, 79);
+  background: radial-gradient(circle, rgb(36, 36, 79) 18%, rgb(32, 18, 48) 59%, rgb(23, 22, 29) 100%);
+  border: solid 1px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.simulator-overlay .simulator span {
+  align-self: flex-end;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.simulator-overlay .simulator .container-for-greeting {
+  width: 100%;
+}
+.simulator-overlay .simulator .container-for-greeting h4 {
+  margin: 5px;
+  font-size: 30px;
+  display: inline;
+  width: 50%;
+}
+.simulator-overlay .simulator .simulator-choose-ticket {
+  display: flex;
+  margin: 15px 0;
+  width: 90%;
+  height: 90%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.simulator-overlay .simulator .simulator-choose-ticket p {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+}
+.simulator-overlay .simulator .simulator-choose-ticket .simulator_ticket {
+  height: 70%;
+  width: 30%;
+  border: 1px solid rgba(255, 255, 255, 0.537254902);
+  border-radius: 8%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 30px;
+}
+.simulator-overlay .simulator .simulator-choose-ticket .simulator_ticket h6 {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+.simulator-overlay .simulator .simulator-choose-ticket .simulator_ticket span {
+  font-size: 15px;
+}
+.simulator-overlay .simulator .simulator-choose-ticket .simulator_ticket .price {
+  font-size: 25px;
+  align-self: center;
+  color: #fd9550;
+}
+.simulator-overlay .simulator .simulator-choose-ticket .simulator_ticket ul {
+  list-style: none;
+  margin-top: 20px;
+}
+.simulator-overlay .simulator .simulator-choose-ticket .simulator_ticket .watch-more {
+  font-size: 15px;
+  margin-top: 15px;
+  align-self: flex-end;
+}
+.simulator-overlay .simulator .simulator-choose-ticket .ticket1 {
+  background: rgb(221, 88, 0);
+  background: linear-gradient(338deg, rgb(221, 88, 0) 0%, rgb(128, 57, 44) 0%, rgb(165, 69, 26) 0%, rgb(83, 42, 65) 22%, rgb(53, 31, 79) 55%, rgba(23, 22, 29, 0.9724264706) 96%);
+}
+.simulator-overlay .simulator .simulator-choose-ticket .ticket2 {
+  background: rgb(221, 88, 0);
+  background: linear-gradient(338deg, rgb(221, 88, 0) 0%, rgb(128, 57, 44) 0%, rgb(165, 69, 26) 0%, rgb(83, 42, 65) 22%, rgb(53, 31, 79) 55%, rgba(23, 22, 29, 0.9724264706) 96%);
+}
+.simulator-overlay .simulator .simulator-choose-ticket .ticket3 {
+  background: rgb(221, 88, 0);
+  background: linear-gradient(338deg, rgb(221, 88, 0) 0%, rgb(128, 57, 44) 0%, rgb(165, 69, 26) 0%, rgb(83, 42, 65) 22%, rgb(53, 31, 79) 55%, rgba(23, 22, 29, 0.9724264706) 96%);
+}

@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Mars;
+    font-weight: 100;
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+
+@font-face {
+    font-family: "Anurati";
+    src: url(/Assets/fonts/Anurati-Regular.otf);
+}
+
+@font-face {
+    font-family:Mars;
+    src: url(/Assets/fonts/Mars-Project.ttf);
+}
+
+@font-face {
+    font-family: Adam;
+    src: url(/Assets/fonts/Adam-Medium.ttf);
+}
+ /* Anchura de la barra de desplazamiento */
+ ::-webkit-scrollbar {
+     width: 10px;
+ }
+
+ /* Color de fondo de la barra de desplazamiento */
+ ::-webkit-scrollbar-track {
+     background-color: rgb(255, 255, 255);
+ }
+
+// /* Color del pulgar (el objeto que se mueve dentro de la barra de desplazamiento) */
+ ::-webkit-scrollbar-thumb {
+     background-color: rgb(36,36,79);
+     border-radius: 5px;
+ }
+
+// /* Color del pulgar cuando se está arrastrando */
+ ::-webkit-scrollbar-thumb:hover {
+     background-color: #555;
+ }
+
+@import "animations";
+@import "main";
+@import "header";
+@import "moonWordSpace";
+@import "popUp";
+@import "simulator";
+@import "moonExploration";
+@import "calendar"

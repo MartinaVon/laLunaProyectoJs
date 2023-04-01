@@ -1,0 +1,843 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Mars;
+  font-weight: 100;
+}
+* a {
+  text-decoration: none;
+  color: white;
+}
+
+@font-face {
+  font-family: "Anurati";
+  src: url(/Assets/fonts/Anurati-Regular.otf);
+}
+@font-face {
+  font-family: Mars;
+  src: url(/Assets/fonts/Mars-Project.ttf);
+}
+@font-face {
+  font-family: Adam;
+  src: url(/Assets/fonts/Adam-Medium.ttf);
+}
+/* Anchura de la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Color de fondo de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+  background-color: rgb(255, 255, 255);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(36, 36, 79);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.show {
+  animation: left_to_right 3s ease;
+}
+
+@keyframes left_to_right {
+  from {
+    left: -500px;
+    opacity: 0;
+  }
+  to {
+    left: 0px;
+    opacity: 1;
+  }
+}
+.fadeIn {
+  opacity: 0;
+  animation: fade-in 1s forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.caca {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container-for-background {
+  background: rgb(36, 36, 79);
+  background: radial-gradient(circle, rgb(36, 36, 79) 18%, rgb(32, 18, 48) 59%, rgb(23, 22, 29) 100%);
+  width: 100%;
+  display: flex;
+  overflow-x: hidden;
+  flex-direction: column;
+  color: white;
+}
+.container-for-background .stars-background {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  opacity: 50%;
+  z-index: 0;
+}
+.container-for-background .main-banner {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.container-for-background .main-banner .astronauta {
+  display: none;
+  position: absolute;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 200px;
+  height: 480px;
+  bottom: -30px;
+  right: 10px;
+  z-index: 4;
+}
+@media (min-width: 900px) {
+  .container-for-background .main-banner .astronauta {
+    display: inline;
+  }
+}
+.container-for-background .main-banner .moon-title {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  padding: 5px;
+  display: flex;
+}
+@media (min-width: 930px) {
+  .container-for-background .main-banner .moon-title {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.container-for-background .main-banner .moon-title h1 {
+  font-size: min(50vw, 220px);
+  margin: auto;
+  position: relative;
+  width: 100%;
+  margin-left: 5vw;
+  line-height: 80vw;
+  font-family: "Anurati";
+  text-align: center;
+}
+@media (min-width: 510px) {
+  .container-for-background .main-banner .moon-title h1 {
+    line-height: min(70vw, 400px);
+  }
+}
+@media (min-width: 925px) {
+  .container-for-background .main-banner .moon-title h1 {
+    font-size: min(20vw, 270px);
+    margin-left: 0;
+  }
+}
+.container-for-background .main-banner .moon-image {
+  z-index: 0;
+  width: 90vw;
+  max-width: 400px;
+  margin: auto;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+.container-for-background .main-banner .main__text-description {
+  padding: 15px;
+  margin-left: 10px;
+  margin-top: 10vh;
+}
+.container-for-background .main-banner .main__text-description h6 {
+  font-size: min(5vw, 25px);
+}
+.container-for-background .main-banner .text-for-welcome {
+  font-size: min(5vw, 25px);
+  margin-top: 50px;
+  margin-left: 100px;
+}
+.container-for-background .image-gallery {
+  margin-top: 50px;
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+.container-for-background .image-gallery h6 {
+  margin-right: 5px;
+  text-align: right;
+  width: 90%;
+  font-size: min(6vw, 40px);
+}
+.container-for-background .image-gallery .image-gallery_image-container {
+  margin-top: 20px;
+  opacity: 0;
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+}
+.container-for-background .image-gallery .image-gallery_image-container .each-image-container {
+  height: 50vh;
+  max-width: 400px;
+  margin: 10px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.container-for-background .container-get-image-from-NASA {
+  height: 80vh;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 70px;
+}
+.container-for-background .container-get-image-from-NASA .NASA-image-title {
+  color: #fd9550;
+  font-size: min(5vw, 30px);
+  margin-bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+.container-for-background .container-get-image-from-NASA .NASA-image-date {
+  width: 100%;
+  text-align: center;
+}
+.container-for-background .container-get-image-from-NASA .NASA-image {
+  margin: 0 30px;
+  width: 90%;
+  max-width: 600px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  opacity: 0;
+}
+.container-for-background .container-get-image-from-NASA .NASA-image-explanation {
+  margin: 15px 0;
+  font-size: min(5vw, 20px);
+  width: 100%;
+  text-align: center;
+}
+.container-for-background .org-info {
+  height: auto;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+}
+.container-for-background .org-info .org-info__textContainer {
+  width: 100%;
+  margin-top: 100px;
+}
+.container-for-background .org-info .org-info__textContainer h4 {
+  font-size: min(6vw, 40px);
+}
+.container-for-background .org-info .org-info__ticketsContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  justify-content: space-around;
+  align-items: center;
+}
+.container-for-background .org-info .org-info__ticketsContainer .org-info__tickets {
+  height: 65vh;
+  margin-top: 10px;
+  width: 60vw;
+  max-height: 350px;
+  max-width: 250px;
+  border: 1px solid rgba(255, 255, 255, 0.537254902);
+  border-radius: 8%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 30px;
+  background: rgb(221, 88, 0);
+  background: linear-gradient(338deg, rgb(221, 88, 0) 0%, rgb(128, 57, 44) 0%, rgb(165, 69, 26) 0%, rgb(83, 42, 65) 22%, rgb(53, 31, 79) 55%, rgba(23, 22, 29, 0.9724264706) 96%);
+}
+@media (min-width: 480px) {
+  .container-for-background .org-info .org-info__ticketsContainer .org-info__tickets {
+    width: 45vw;
+  }
+}
+.container-for-background .org-info .org-info__ticketsContainer h6 {
+  font-size: min(5vw, 20px);
+  margin-bottom: 15px;
+}
+.container-for-background .org-info .org-info__ticketsContainer .price {
+  font-size: min(5vw, 25px);
+  align-self: center;
+  color: #fd9550;
+}
+.container-for-background .org-info .org-info__ticketsContainer ul {
+  list-style: none;
+  margin-top: 10px;
+}
+.container-for-background .org-info .org-info__ticketsContainer ul span {
+  font-size: min(5vw, 20px);
+}
+.container-for-background .org-info .org-info__ticketsContainer .watch-more {
+  font-size: min(5vw, 20px);
+  margin-top: 20px;
+}
+.container-for-background .go-to-simulator {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 50px auto;
+  text-align: center;
+  z-index: 2;
+}
+.container-for-background .go-to-simulator h3 {
+  border: solid 1px;
+  font-size: 20px;
+  margin: auto;
+  padding: 10px;
+  border-radius: 8%;
+  width: 70%;
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  height: 90px;
+  width: 100%;
+  padding: 20px;
+  position: absolute;
+  background-color: transparent;
+  z-index: 5;
+}
+header nav {
+  width: 50%;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  font-size: 19px;
+}
+
+.header__checkout-box {
+  width: 50%;
+}
+
+.the-moon-word-space {
+  width: 150%;
+  height: auto;
+  align-self: center;
+}
+.the-moon-word-space h4 {
+  display: inline;
+  font-size: min(5vw, 70px);
+}
+.the-moon-word-space h4 span {
+  font-size: 20px;
+  font-size: min(5vw, 70px);
+}
+.the-moon-word-space .yellow-moon {
+  color: #fd9550;
+}
+
+.popUp-overlay {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.475);
+  z-index: 2;
+}
+.popUp-overlay .init-popUp {
+  width: 100%;
+  max-width: 650px;
+  position: absolute;
+  height: 35%;
+  background-color: #17161d;
+  border: solid 1px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.popUp-overlay .init-popUp h5 {
+  font-size: min(4vw, 30px);
+  margin-bottom: 30px;
+}
+.popUp-overlay .init-popUp input {
+  padding: 10px;
+  width: 70%;
+  border: none;
+  margin: 5px;
+}
+.popUp-overlay .init-popUp input:focus {
+  outline: none;
+}
+.popUp-overlay .init-popUp .text-input:focus {
+  border: solid 1px rgb(24, 1, 54);
+}
+.popUp-overlay .init-popUp .submit-input {
+  cursor: pointer;
+}
+.popUp-overlay .init-popUp .submit-input:hover {
+  background-color: #fd9550;
+  color: white;
+}
+.popUp-overlay .init-popUp span {
+  align-self: flex-end;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.popUp-overlay .init-popUp h6 {
+  font-size: 15px;
+  margin: 15px 0;
+}
+
+.overlay-display-none {
+  display: none;
+}
+
+.simulator-overlay {
+  height: 100vh;
+  width: 100%;
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.475);
+  z-index: 4;
+}
+.simulator-overlay .simulator {
+  padding: 10px;
+  position: absolute;
+  height: 90vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background: rgb(36, 36, 79);
+  background: radial-gradient(circle, rgb(36, 36, 79) 18%, rgb(32, 18, 48) 59%, rgb(23, 22, 29) 100%);
+  border: solid 1px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 700px) {
+  .simulator-overlay .simulator {
+    width: 80%;
+  }
+}
+.simulator-overlay .simulator .span-for-closing-simulator {
+  font-size: 30px;
+  align-self: flex-end;
+  cursor: pointer;
+}
+.simulator-overlay .simulator .container-for-greeting {
+  width: 100%;
+}
+.simulator-overlay .simulator .container-for-greeting h4 {
+  margin: 5px;
+  font-size: min(6vw, 40px);
+  display: inline;
+  width: 50%;
+}
+.simulator-overlay .simulator .simulator-choose-ticket {
+  display: flex;
+  margin-top: 100px;
+  width: 100%;
+  height: 90%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.simulator-overlay .simulator .simulator-choose-ticket p {
+  margin-bottom: 60px;
+  width: 100%;
+  text-align: center;
+  font-size: min(5vw, 25px);
+}
+.simulator-overlay .simulator .simulator-choose-ticket .simulator_ticket {
+  margin-bottom: 15px;
+  max-width: 300px;
+  height: auto;
+  width: 40%;
+  border: 1px solid rgba(255, 255, 255, 0.537254902);
+  border-radius: 8%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 15px;
+}
+.simulator-overlay .simulator .simulator-choose-ticket .simulator_ticket h6 {
+  font-size: min(5vw, 20px);
+  height: 20px;
+  margin-bottom: 20px;
+}
+.simulator-overlay .simulator .simulator-choose-ticket .simulator_ticket span {
+  font-size: min(5vw, 20px);
+  margin: 0;
+  cursor: pointer;
+}
+.simulator-overlay .simulator .simulator-choose-ticket .simulator_ticket .price {
+  font-size: min(5vw, 20px);
+  align-self: center;
+  color: #fd9550;
+}
+.simulator-overlay .simulator .simulator-choose-ticket .simulator_ticket .watch-more {
+  font-size: min(5vw, 20px);
+  margin-top: 15px;
+  align-self: flex-end;
+}
+.simulator-overlay .simulator .simulator-choose-ticket .ticket1 {
+  background: rgb(221, 88, 0);
+  background: linear-gradient(338deg, rgb(221, 88, 0) 0%, rgb(128, 57, 44) 0%, rgb(165, 69, 26) 0%, rgb(83, 42, 65) 22%, rgb(53, 31, 79) 55%, rgba(23, 22, 29, 0.9724264706) 96%);
+}
+.simulator-overlay .simulator .simulator-choose-ticket .ticket2 {
+  background: rgb(221, 88, 0);
+  background: linear-gradient(338deg, rgb(221, 88, 0) 0%, rgb(128, 57, 44) 0%, rgb(165, 69, 26) 0%, rgb(83, 42, 65) 22%, rgb(53, 31, 79) 55%, rgba(23, 22, 29, 0.9724264706) 96%);
+}
+.simulator-overlay .simulator .simulator-choose-ticket .ticket3 {
+  background: rgb(221, 88, 0);
+  background: linear-gradient(338deg, rgb(221, 88, 0) 0%, rgb(128, 57, 44) 0%, rgb(165, 69, 26) 0%, rgb(83, 42, 65) 22%, rgb(53, 31, 79) 55%, rgba(23, 22, 29, 0.9724264706) 96%);
+}
+.simulator-overlay .simulator .simulator-form-container {
+  opacity: 0;
+  display: flex;
+  transition: 3s;
+  width: 90%;
+  height: 90%;
+  margin: 100px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.simulator-overlay .simulator .simulator-form-container p {
+  width: 100%;
+  font-size: min(5vw, 25px);
+  text-align: center;
+}
+.simulator-overlay .simulator .simulator-form-container .get-ticket-info {
+  color: #fd9550;
+}
+.simulator-overlay .simulator .simulator-form-container .simulator-form-arrow-back {
+  font-size: 5vh;
+  align-self: flex-start;
+}
+.simulator-overlay .simulator .simulator-form-container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 700px) {
+  .simulator-overlay .simulator .simulator-form-container form {
+    width: 60%;
+  }
+}
+.simulator-overlay .simulator .simulator-form-container form .form-input-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+.simulator-overlay .simulator .simulator-form-container form .form-input-container label {
+  margin: 10px;
+  font-size: min(4vw, 20px);
+}
+.simulator-overlay .simulator .simulator-form-container .formSubmit {
+  width: 50%;
+  padding: 10px;
+  border: none;
+  background-color: #fd9550;
+  font-size: 20px;
+  align-self: center;
+  cursor: pointer;
+}
+.simulator-overlay .simulator .simulator-result-container {
+  width: 90%;
+  opacity: 0;
+  display: flex;
+  transition: 3s;
+  height: 90%;
+  margin: 100px 0;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.simulator-overlay .simulator .simulator-result-container .show-client-travel-results {
+  width: 100%;
+  height: 100%;
+  order: -1;
+  margin-bottom: 100px;
+}
+.simulator-overlay .simulator .simulator-result-container .show-client-travel-results p {
+  font-size: 20px;
+  text-align: left;
+  margin: 20px;
+}
+.simulator-overlay .simulator .simulator-result-container h4 {
+  font-size: 40px;
+  color: #fd9550;
+}
+.simulator-overlay .simulator .simulator-result-container h6 {
+  font-size: 25px;
+  margin: 20px 0;
+}
+.simulator-overlay .simulator .simulator-result-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.simulator-overlay .simulator .simulator-result-container form input {
+  padding: 10px;
+  width: 50%;
+}
+.simulator-overlay .simulator .simulator-result-container form input:focus {
+  outline: none;
+  border: solid #fd9550 3px;
+}
+.simulator-overlay .simulator .simulator-result-container form button {
+  width: 50%;
+  padding: 10px;
+  border: none;
+  background-color: #fd9550;
+  font-size: 20px;
+  margin-top: 100px;
+  align-self: center;
+  cursor: pointer;
+}
+.simulator-overlay .simulator .simulator-result-container form .sayGoodbye {
+  display: none;
+  margin-top: 10px;
+}
+
+.moon-exploration {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  position: relative;
+}
+.moon-exploration .moon-exploration___title {
+  margin-top: 80px;
+  padding: 15px;
+}
+.moon-exploration .moon-exploration___title h5 {
+  text-align: center;
+  font-size: min(7vw, 30px);
+}
+.moon-exploration .moon-exploration___img {
+  height: auto;
+  opacity: 0;
+  width: 50%;
+  position: relative;
+  display: block;
+}
+@media (min-width: 925px) {
+  .moon-exploration .moon-exploration___img {
+    width: 30%;
+  }
+}
+.moon-exploration .moon-exploration___img img {
+  width: 80vw;
+  max-width: 600px;
+}
+.moon-exploration .moon-exploration___img span {
+  font-size: min(6vw, 30px);
+  position: absolute;
+  color: #fd9550;
+  cursor: pointer;
+  display: none;
+}
+.moon-exploration .moon-exploration___img .cold-span1 {
+  top: 56%;
+  left: 35%;
+}
+.moon-exploration .moon-exploration___img .cold-span2 {
+  top: 20%;
+  left: 80%;
+}
+.moon-exploration .moon-exploration___img .cold-span3 {
+  top: 80%;
+  left: 70%;
+}
+.moon-exploration .moon-exploration___img .hot-span1 {
+  top: 25%;
+  left: 95%;
+}
+.moon-exploration .moon-exploration___img .hot-span2 {
+  top: 80%;
+  left: 55%;
+}
+.moon-exploration .moon-exploration___img .hot-span3 {
+  top: 45%;
+  left: 70%;
+}
+.moon-exploration .moon-exploration__filter {
+  opacity: 0;
+  width: 100%;
+  align-self: flex-end;
+  position: relative;
+}
+@media (min-width: 1000px) {
+  .moon-exploration .moon-exploration__filter {
+    width: 50%;
+  }
+}
+.moon-exploration .moon-exploration__filter h6 {
+  font-size: min(5vw, 25px);
+  padding: 5px;
+  text-align: center;
+  border: #fd9550 3px solid;
+  border-right: none;
+  border-radius: 10px;
+}
+.moon-exploration .moon-exploration__filter .weather-options {
+  display: flex;
+  margin-top: 25px;
+  justify-content: space-around;
+}
+.moon-exploration .moon-exploration__filter .weather-options h4 {
+  font-size: min(5vw, 25px);
+  cursor: pointer;
+  background-color: #fd9550;
+  padding: 5px;
+  width: 30%;
+  text-align: center;
+  border-radius: 10px;
+}
+.moon-exploration .cold-weather-card1 {
+  width: 90%;
+  max-width: 500px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: 200px;
+  height: 70%;
+  background: rgb(36, 36, 79);
+  background: radial-gradient(circle, rgb(36, 36, 79) 18%, rgb(32, 18, 48) 59%, rgb(23, 22, 29) 100%);
+  border-radius: 20px;
+  border: solid 1px white;
+  display: none;
+}
+@media (min-width: 1000px) {
+  .moon-exploration .cold-weather-card1 {
+    left: 500px;
+    right: 20px;
+    margin-top: 300px;
+    height: 60%;
+  }
+}
+.moon-exploration .cold-weather-card1 .span-for-closing-card {
+  margin: 10px;
+}
+.moon-exploration .cold-weather-card1 h3 {
+  margin-top: 10px;
+  font-size: min(6vw, 27px);
+  text-align: center;
+}
+.moon-exploration .cold-weather-card1 p {
+  font-size: min(5vw, 25px);
+  margin: 20px 0;
+  text-align: center;
+  top: 50px;
+}
+.moon-exploration .cold-weather-card1 .image {
+  width: 80vw;
+  max-width: 470px;
+  display: block;
+  margin: auto;
+}
+
+.simulator-calendar-container {
+  height: 90%;
+  width: 90%;
+  opacity: 0;
+  display: flex;
+  transition: 3s;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.simulator-calendar-container .calendar-container {
+  display: flex;
+  margin-top: 100px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.simulator-calendar-container .calendar-container p {
+  width: 100%;
+  font-size: min(4vw, 25px);
+  text-align: center;
+  margin-bottom: 50px;
+}
+.simulator-calendar-container .calendar-container .form-control {
+  padding: 10px;
+  border: none;
+  width: 400px;
+  border-bottom: 1px solid white;
+  background: none;
+  color: white;
+  order: 2;
+  align-self: flex-start;
+  font-size: min(4vw, 20px);
+}
+.simulator-calendar-container .calendar-container .form-control:focus {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid white;
+}
+.simulator-calendar-container .calendar-container .flatpickr-calendar {
+  padding: 10px;
+  width: auto;
+}
+.simulator-calendar-container .calendar-container .flatpickr-calendar .flatpickr-day {
+  width: 60px;
+}
+.simulator-calendar-container .calendar-container .flatpickr-calendar .flatpickr-day:hover {
+  background: rgb(36, 36, 79);
+  color: white;
+}
+.simulator-calendar-container .calendar-container .flatpickr-calendar .flatpickr-day.selected {
+  background: rgb(36, 36, 79);
+  color: white;
+}
+.simulator-calendar-container .calendar-submit {
+  width: 50%;
+  margin-top: 50px;
+  padding: 10px;
+  border: none;
+  background-color: #fd9550;
+  font-size: 20px;
+  align-self: center;
+  cursor: pointer;
+}
+.simulator-calendar-container .simulator-calendar-arrow-back {
+  align-self: flex-start;
+  font-size: 5vh;
+}

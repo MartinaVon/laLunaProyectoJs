@@ -1,0 +1,246 @@
+
+.container-for-background {
+    background: rgb(36,36,79);
+    background: radial-gradient(circle, rgba(36,36,79,1) 18%, rgba(32,18,48,1) 59%, rgba(23,22,29,1) 100%);
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: column;
+    color: white;
+
+    .stars-background {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        opacity: 50%;
+        z-index: 0;
+    }
+
+    .main-banner { 
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        .astronauta {
+            display: none;
+            position: absolute;
+            object-fit: contain;
+            width: 200px;
+            height: 480px;
+            bottom: -30px;
+            right: 10px;
+            z-index: 4;
+            @media (min-width: 900px) {
+                display: inline;
+            }
+        }
+        .moon-title {
+            width: 100%;
+            height: 80vh;
+            position: relative;
+            padding: 5px;
+            display: flex;
+            @media (min-width: 930px) {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            h1 {
+                font-size: min(50vw, 220px);
+                margin: auto;
+                position: relative;
+                width: 100%;
+                margin-left:5vw;
+                line-height:80vw;
+                font-family: "Anurati";
+                text-align: center;
+                @media (min-width: 510px) {
+                    line-height: min(70vw, 400px);
+                }
+                @media (min-width: 925px) {
+                    font-size: min(20vw,270px);
+                    margin-left: 0;
+                }
+            }
+        }
+        .moon-image {
+            z-index: 0;
+            width: 90vw;
+            max-width: 400px;
+            margin: auto;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+        }
+        .main__text-description {
+            padding: 15px;
+            margin-left: 10px;
+            margin-top: 10vh;
+ 
+            h6 {
+                font-size: min(5vw, 25px);
+            }   
+
+        }
+        .text-for-welcome {
+            font-size: min(5vw, 25px);
+            margin-top: 50px;
+            margin-left: 100px;
+        }
+    }
+
+    .image-gallery {
+        margin-top: 50px;
+        height: 60vh;
+        width: 100%;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        h6 {
+            margin-right: 5px;
+            text-align: right;
+            width: 90%;
+            font-size: min(6vw, 40px);
+        }
+        .image-gallery_image-container{
+            margin-top: 20px;
+            opacity: 0;
+            width: 100%;
+            display: flex;
+            position: relative;
+            justify-content: space-around;
+
+            .each-image-container {
+                height: 50vh;
+                max-width: 400px;
+                margin: 10px;
+                object-fit: contain;
+            }
+        }
+    }
+
+    .container-get-image-from-NASA {
+        height: 80vh;
+        width: 100%;
+        z-index: 3;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        object-fit: contain;
+        margin-bottom: 70px;
+
+        @media (min-width: 920px){
+
+        }
+        .NASA-image-title {
+            color: #fd9550;
+            font-size: min(5vw,30px);
+            margin-bottom: 15px;
+            width: 100%;
+            text-align: center;
+        }
+        .NASA-image-date {
+            width: 100%;
+            text-align: center;
+        }
+        .NASA-image {
+            margin: 0 30px;
+            width: 90%;
+            max-width: 600px;
+            object-fit: contain;
+            opacity: 0;
+        }
+        .NASA-image-explanation {
+            margin: 15px 0;
+            font-size: min(5vw,20px);
+            width: 100%;
+            text-align: center;
+        }
+
+    }
+
+    .org-info {
+        height: auto;
+        width: 100%;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+
+        .org-info__textContainer {
+            width: 100%;
+            margin-top: 100px;
+            h4 {
+                font-size: min(6vw, 40px);
+            }
+        }
+
+        .org-info__ticketsContainer{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 20px;
+            justify-content: space-around;
+            align-items: center;
+
+            .org-info__tickets {
+                height: 65vh;
+                margin-top: 10px;
+                width: 60vw;
+                max-height: 350px;
+                max-width: 250px;
+                border: 1px solid #ffffff89;
+                border-radius: 8%;
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                padding: 30px;
+                background: rgb(221,88,0);
+                background: linear-gradient(338deg, rgba(221,88,0,1) 0%, rgba(128,57,44,1) 0%, rgba(165,69,26,1) 0%, rgba(83,42,65,1) 22%, rgba(53,31,79,1) 55%, rgba(23,22,29,0.9724264705882353) 96%);
+                @media (min-width: 480px) {
+                    width: 45vw;
+                }
+            }
+                h6 {
+                    font-size: min(5vw, 20px);
+                    margin-bottom: 15px;
+                }
+                .price { 
+                    font-size: min(5vw, 25px);
+                    align-self: center;
+                    color: #fd9550;
+                }
+                ul {
+                    list-style: none;
+                    margin-top: 10px;
+                    span {
+                        font-size: min(5vw, 20px);
+                    }
+                }
+                .watch-more {
+                    font-size: min(5vw, 20px);
+                    margin-top: 20px;
+                }
+            }
+    }
+    .go-to-simulator {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        margin: 50px auto;
+        text-align: center;
+        z-index: 2;
+        h3 {
+            border: solid 1px ;
+            font-size: 20px;
+            margin: auto;
+            padding: 10px;
+            border-radius: 8%;
+            width: 70%;
+            cursor: pointer;
+        }
+    }
+}
+
